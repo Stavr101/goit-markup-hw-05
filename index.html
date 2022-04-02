@@ -29,7 +29,7 @@
           <a href="" class="logo link"><span>Web</span>Studio</a>
           <ul class="site-nav list">
             <li class="item">
-              <a class="link current" href="./index.html">Студия</a>
+              <a class="link current-index" href="./index.html">Студия</a>
             </li>
             <li class="item">
               <a class="link" href="./portfolio.html">Портфолио</a>
@@ -65,9 +65,10 @@
       <section class="hero">
         <div class="contentainer">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button data-modal-open type="button" class="hero-button">
+            Заказать услугу
+          </button>
         </div>
-        
       </section>
       <!-- hero end -->
 
@@ -429,11 +430,16 @@
       </div>
     </footer>
 
-    <div class="backdrop">
-          <div class="modal"></div>
-        </div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close type="button" class="hero-close-btn">
+          <svg class="hero-close-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-        
     <script src="./js/modal.js"></script>
   </body>
 </html>

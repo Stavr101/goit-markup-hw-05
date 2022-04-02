@@ -102,6 +102,7 @@ address {
 }
 .site-nav {
   display: flex;
+  position: relative;
 }
 .site-nav .item .link {
   display: block;
@@ -165,6 +166,28 @@ address {
 .site-nav .link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+}
+
+.link.current-index::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(33, 150, 243, 1);
+}
+
+.link.current-portfolio::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(33, 150, 243, 1);
 }
 
 /* header end */
@@ -608,8 +631,40 @@ address {
   flex-basis: calc((100% - 90px) / 3);
 }
 
+.product {
+  position: relative;
+}
+
+/* ..product:hover::before {
+  opacity: 1;
+} */
+
+.product::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.work-list-link .product-text {
+  position: absolute;
+  /* top: 0;
+  bottom: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 322px;
+  height: 168px;
+}
+
 .work-list-link:hover,
 .work-list-link:focus {
+  opacity: 1;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -659,8 +714,27 @@ address {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-height: 581px;
-  min-width: 528px;
+  height: 581px;
+  width: 528px;
   border-radius: 4px;
-  fill: var(--secondary-accent-color);
+  background-color: var(--secondary-accent-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.hero-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  cursor: pointer;
 }
