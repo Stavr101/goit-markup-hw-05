@@ -224,15 +224,6 @@ address {
   background-color: #188ce8;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 /* hero end */
 
 /* quality start*/
@@ -646,3 +637,30 @@ address {
   color: var(--secondary-text-color);
 }
 /* work end */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 581px;
+  min-width: 528px;
+  border-radius: 4px;
+  fill: var(--secondary-accent-color);
+}
