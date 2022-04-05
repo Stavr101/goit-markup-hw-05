@@ -23,32 +23,34 @@
   <body>
     <!-- header start -->
 
-    <header class="section-nav">
+    <header class="header">
       <div class="container header-container">
         <nav class="nav">
-          <a href="" class="logo link"><span>Web</span>Studio</a>
+          <a href="" class="logo link"
+            >Web<span class="logo-black">Studio</span></a
+          >
           <ul class="site-nav list">
             <li class="item">
-              <a class="link current" href="./index.html">Студия</a>
+              <a class="link header-link current" href="./index.html">Студия</a>
             </li>
             <li class="item">
-              <a class="link" href="./portfolio.html">Портфолио</a>
+              <a class="link header-link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="item">
-              <a class="link" href="">Контакты</a>
+              <a class="link header-link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
         <ul class="auth-nav list">
           <li class="item">
-            <a class="link mail" href="mailto:info@example.com">
+            <a class="link header-link" href="mailto:info@example.com">
               <svg class="link-icon">
                 <use href="./images/sprite.svg#envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="item">
-            <a class="link" href="tel:+38-099-111-11-11">
+            <a class="link header-link" href="tel:+38-099-111-11-11">
               <svg class="link-icon">
                 <use href="./images/sprite.svg#telephone"></use></svg
               >+38 096 111 11 11</a
@@ -63,7 +65,7 @@
       <!-- hero  start-->
 
       <section class="hero">
-        <div class="contentainer">
+        <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button data-modal-open type="button" class="hero-button">
             Заказать услугу
@@ -76,7 +78,7 @@
       <section class="section quality">
         <div class="container">
           <h2 class="visually-hidden">Наши преимущества</h2>
-          <ul class="feature-list list">
+          <ul class="card-set feature-list list">
             <li class="quality-card">
               <div class="qualiti-item">
                 <svg class="quality-icon" width="70" height="70">
@@ -134,7 +136,7 @@
       <section class="section service">
         <div class="container">
           <h2 class="service-title">Чем мы занимаемся</h2>
-          <ul class="service-list list">
+          <ul class="card-set service-list list">
             <li class="service-card">
               <div class="service-icon">
                 <img
@@ -173,7 +175,7 @@
       <section class="section team">
         <div class="container">
           <h2 class="team-secondary-title">Наша команда</h2>
-          <ul class="team-list list">
+          <ul class="card-set team-list list">
             <li class="team-card">
               <img
                 src="./images/demianenko.jpg"
@@ -343,7 +345,7 @@
       <section class="section client">
         <div class="container">
           <h2 class="clients-title">Постоянные клиенты</h2>
-          <ul class="client-list list">
+          <ul class="card-set client-list list">
             <li class="client-card">
               <a class="client-link" href="">
                 <svg class="client-link-icon" width="106" height="60">
@@ -394,7 +396,9 @@
     <footer class="footer">
       <div class="container footer-content">
         <div class="contact-footer">
-          <a class="logo-footer link" href=""><span>Web</span>Studio</a>
+          <a href="" class="logo link"
+            >Web<span class="logo-white">Studio</span></a
+          >
           <address class="adress list">
             <ul class="nav-footer list">
               <li class="nav-footer-item">г. Киев, пр-т Леси Украинки, 26</li>
